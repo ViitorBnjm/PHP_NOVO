@@ -37,7 +37,7 @@ if(isset($_POST['sub'])){
                 </tr>
                 <tr>
                     <td>
-                        password
+                        Password
                         <input type="password" name="pass">
                     </td>
                 </tr>
