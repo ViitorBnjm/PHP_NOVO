@@ -11,7 +11,9 @@
     
     
 ?>
-<html>
+
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -20,33 +22,28 @@
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
   <!-- Font Awesome -->
-  <link rel="stylesheet" href="AdminLTE-3.2.0/AdminLTE-3.2.0/plugins/fontawesome-free/css/all.min.css">
+  <link rel="stylesheet" href="AdminLTE-3.2.0/plugins/fontawesome-free/css/all.min.css">
   <!-- Ionicons -->
-  <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+  <link rel="stylesheet" href="AdminLTE-3.2.0/https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
   <!-- Tempusdominus Bootstrap 4 -->
-  <link rel="stylesheet" href="AdminLTE-3.2.0/AdminLTE-3.2.0/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
+  <link rel="stylesheet" href="AdminLTE-3.2.0/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
   <!-- iCheck -->
-  <link rel="stylesheet" href="AdminLTE-3.2.0/AdminLTE-3.2.0/plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+  <link rel="stylesheet" href="AdminLTE-3.2.0/plugins/icheck-bootstrap/icheck-bootstrap.min.css">
   <!-- JQVMap -->
-  <link rel="stylesheet" href="AdminLTE-3.2.0/AdminLTE-3.2.0/plugins/jqvmap/jqvmap.min.css">
+  <link rel="stylesheet" href="AdminLTE-3.2.0/plugins/jqvmap/jqvmap.min.css">
   <!-- Theme style -->
-  <link rel="stylesheet" href="AdminLTE-3.2.0/AdminLTE-3.2.0/dist/css/adminlte.min.css">
+  <link rel="stylesheet" href="AdminLTE-3.2.0/dist/css/adminlte.min.css">
   <!-- overlayScrollbars -->
-  <link rel="stylesheet" href="AdminLTE-3.2.0/AdminLTE-3.2.0/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+  <link rel="stylesheet" href="AdminLTE-3.2.0/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
   <!-- Daterange picker -->
-  <link rel="stylesheet" href="AdminLTE-3.2.0/AdminLTE-3.2.0/plugins/daterangepicker/daterangepicker.css">
+  <link rel="stylesheet" href="AdminLTE-3.2.0/plugins/daterangepicker/daterangepicker.css">
   <!-- summernote -->
-  <link rel="stylesheet" href="AdminLTE-3.2.0/AdminLTE-3.2.0/plugins/summernote/summernote-bs4.min.css">
+  <link rel="stylesheet" href="AdminLTE-3.2.0/plugins/summernote/summernote-bs4.min.css">
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
 <div class="wrapper">
 
-  <!-- Preloader -->
-  <div class="preloader flex-column justify-content-center align-items-center">
-  <img src="<?php
-echo $f['image'];?>" width="60px" height="60px"> <?php
-echo $f['username'];?>
-  </div>
+ 
 
   <!-- Navbar -->
   <nav class="main-header navbar navbar-expand navbar-white navbar-light">
@@ -63,7 +60,7 @@ echo $f['username'];?>
       </li>
     </ul>
 
-     <!-- Right navbar links -->
+    <!-- Right navbar links -->
     <ul class="navbar-nav ml-auto">
       <!-- Navbar Search -->
       <li class="nav-item">
@@ -87,13 +84,6 @@ echo $f['username'];?>
         </div>
       </li>
 
-
-       <!-- <div class="inner">  -->
-          <!-- <h3><?php echo $fe['total'] ?></h3> -->
-
-          <!--  <p>User Registrations</p> -->
-      <!-- </div>  -->
-
       <!-- Messages Dropdown Menu -->
       <li class="nav-item dropdown">
         <a class="nav-link" data-toggle="dropdown" href="#">
@@ -104,8 +94,7 @@ echo $f['username'];?>
           <a href="#" class="dropdown-item">
             <!-- Message Start -->
             <div class="media">
-              <img src="<?php
-                echo $f['image'];?>" alt="User Avatar" class="img-size-50 mr-3 img-circle">
+              <img src="dist/img/user1-128x128.jpg" alt="User Avatar" class="img-size-50 mr-3 img-circle">
               <div class="media-body">
                 <h3 class="dropdown-item-title">
                   Brad Diesel
@@ -115,15 +104,13 @@ echo $f['username'];?>
                 <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 4 Hours Ago</p>
               </div>
             </div>
-
             <!-- Message End -->
           </a>
           <div class="dropdown-divider"></div>
           <a href="#" class="dropdown-item">
             <!-- Message Start -->
             <div class="media">
-              <img src=""<?php
-echo $f['image'];?>"" alt="User Avatar" class="img-size-50 img-circle mr-3">
+              <img src="dist/img/user8-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3">
               <div class="media-body">
                 <h3 class="dropdown-item-title">
                   John Pierce
@@ -139,7 +126,7 @@ echo $f['image'];?>"" alt="User Avatar" class="img-size-50 img-circle mr-3">
           <a href="#" class="dropdown-item">
             <!-- Message Start -->
             <div class="media">
-              <img src="<?php echo $f['image'];?>" alt="User Avatar" class="img-size-50 img-circle mr-3">
+              <img src="dist/img/user3-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3">
               <div class="media-body">
                 <h3 class="dropdown-item-title">
                   Nora Silvester
@@ -200,10 +187,7 @@ echo $f['image'];?>"" alt="User Avatar" class="img-size-50 img-circle mr-3">
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
     <a href="index3.html" class="brand-link">
-      <img src=<?php
-      echo $f['image'];?> alt="AdminLTE Logo" class="brand-image 
-      img-circle elevation-3" style="opacity: .8" <?php
-echo $f['username'];?>>
+      <img src="AdminLTE-3.2.0/dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
       <span class="brand-text font-weight-light">AdminLTE 3</span>
     </a>
 
@@ -212,15 +196,27 @@ echo $f['username'];?>>
       <!-- Sidebar user panel (optional) -->
       <div class="user-panel mt-3 pb-3 mb-3 d-flex">
         <div class="image">
-          <img src="AdminLTE-3.2.0/AdminLTE-3.2.0/dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
+          <img src="<?php echo $f['image'];?>" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
-          <a href="#" class="d-block">Alexander Pierce</a>
+          <a href="#" class="d-block"><?php echo $f['username'];?></a>
         </div>
       </div>
 
-<!-- Sidebar Menu -->
-<nav class="mt-2">
+      <!-- SidebarSearch Form -->
+      <div class="form-inline">
+        <div class="input-group" data-widget="sidebar-search">
+          <input class="form-control form-control-sidebar" type="search" placeholder="Search" aria-label="Search">
+          <div class="input-group-append">
+            <button class="btn btn-sidebar">
+              <i class="fas fa-search fa-fw"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sidebar Menu -->
+      <nav class="mt-2">
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
@@ -268,7 +264,7 @@ echo $f['username'];?>>
               <p>
                 Layout Options
                 <i class="fas fa-angle-left right"></i>
-                <span   class="badge badge-info right">6</span>
+                <span class="badge badge-info right">6</span>
               </p>
             </a>
             <ul class="nav nav-treeview">
@@ -921,7 +917,7 @@ echo $f['username'];?>>
             <!-- small box -->
             <div class="small-box bg-warning">
               <div class="inner">
-                <h3>44</h3>
+                <h3><?php echo $fe['total'] ?></h3>
 
                 <p>User Registrations</p>
               </div>
@@ -1492,30 +1488,30 @@ echo $f['username'];?>>
   $.widget.bridge('uibutton', $.ui.button)
 </script>
 <!-- Bootstrap 4 -->
-<script src="AdminLTE-3.2.0/AdminLTE-3.2.0/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="AdminLTE-3.2.0/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 <!-- ChartJS -->
-<script src="AdminLTE-3.2.0/AdminLTE-3.2.0/plugins/chart.js/Chart.min.js"></script>
+<script src="AdminLTE-3.2.0/plugins/chart.js/Chart.min.js"></script>
 <!-- Sparkline -->
-<script src="AdminLTE-3.2.0/AdminLTE-3.2.0/plugins/sparklines/sparkline.js"></script>
+<script src="AdminLTE-3.2.0/plugins/sparklines/sparkline.js"></script>
 <!-- JQVMap -->
-<script src="AdminLTE-3.2.0/AdminLTE-3.2.0/plugins/jqvmap/jquery.vmap.min.js"></script>
-<script src="AdminLTE-3.2.0/AdminLTE-3.2.0/plugins/jqvmap/maps/jquery.vmap.usa.js"></script>
+<script src="AdminLTE-3.2.0/plugins/jqvmap/jquery.vmap.min.js"></script>
+<script src="AdminLTE-3.2.0/plugins/jqvmap/maps/jquery.vmap.usa.js"></script>
 <!-- jQuery Knob Chart -->
-<script src="AdminLTE-3.2.0/AdminLTE-3.2.0/plugins/jquery-knob/jquery.knob.min.js"></script>
+<script src="AdminLTE-3.2.0/plugins/jquery-knob/jquery.knob.min.js"></script>
 <!-- daterangepicker -->
-<script src="AdminLTE-3.2.0/AdminLTE-3.2.0/plugins/moment/moment.min.js"></script>
-<script src="AdminLTE-3.2.0/AdminLTE-3.2.0/plugins/daterangepicker/daterangepicker.js"></script>
+<script src="AdminLTE-3.2.0/plugins/moment/moment.min.js"></script>
+<script src="AdminLTE-3.2.0/plugins/daterangepicker/daterangepicker.js"></script>
 <!-- Tempusdominus Bootstrap 4 -->
-<script src="AdminLTE-3.2.0/AdminLTE-3.2.0/plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
+<script src="AdminLTE-3.2.0/plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
 <!-- Summernote -->
-<script src="AdminLTE-3.2.0/AdminLTE-3.2.0/plugins/summernote/summernote-bs4.min.js"></script>
+<script src="AdminLTE-3.2.0/plugins/summernote/summernote-bs4.min.js"></script>
 <!-- overlayScrollbars -->
-<script src="AdminLTE-3.2.0/AdminLTE-3.2.0/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+<script src="AdminLTE-3.2.0/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
 <!-- AdminLTE App -->
-<script src="AdminLTE-3.2.0/AdminLTE-3.2.0/dist/js/adminlte.js"></script>
+<script src="AdminLTE-3.2.0/dist/js/adminlte.js"></script>
 <!-- AdminLTE for demo purposes -->
-<script src="AdminLTE-3.2.0/AdminLTE-3.2.0/dist/js/demo.js"></script>
+<script src="AdminLTE-3.2.0/dist/js/demo.js"></script>
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-<script src="AdminLTE-3.2.0/AdminLTE-3.2.0/dist/js/pages/dashboard.js"></script>
+<script src="AdminLTE-3.2.0/dist/js/pages/dashboard.js"></script>
 </body>
 </html>
