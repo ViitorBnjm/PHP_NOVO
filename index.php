@@ -250,10 +250,19 @@
             </ul>
           </li>
           <li class="nav-item">
-            <a href="pages/widgets.html" class="nav-link">
+            <a href="loginv2.php" class="nav-link">
               <i class="nav-icon fas fa-th"></i>
               <p>
-                Widgets
+                Login
+                <span class="right badge badge-danger">New</span>
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="reg.php" class="nav-link">
+              <i class="nav-icon fas fa-th"></i>
+              <p>
+                Registrar
                 <span class="right badge badge-danger">New</span>
               </p>
             </a>
