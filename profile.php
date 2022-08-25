@@ -21,6 +21,13 @@ if(isset($_POST['sub'])){
      $s="select*from reg where id='$_SESSION[id]'";
     $qu= mysqli_query($con, $s);
     $f=mysqli_fetch_assoc($qu);
+
+    if(isset($_POST['sub'])){
+    $nameCity=$_POST['nameCity'];
+
+    //$i="insert into reg(name,username,password,city,image,gender)value('$t','$u','$p','$c','$img','$g')";
+    $i="insert into city (nameCity) values ('$nameCity')";
+    mysqli_query($con, $i);}
     ?> 
 
 <!DOCTYPE html>
@@ -1085,15 +1092,17 @@ if(isset($_POST['sub'])){
                   </div>
                   <!-- /.tab-pane -->
                   <div class="tab-pane" id="timeline">
-                    <!-- The timeline -->
-                    <div class="timeline timeline-inverse">
-                      <!-- timeline time label -->
-                      <div class="time-label">
-                        <span class="bg-danger">
-                          10 Feb. 2014
-                        </span>
-                      </div>
+                    
+                  
+                  <!-- The timelineabc -->
+                  <div class="form-group row">
+                        <label for="inputEmail" class="col-sm-2 col-form-label">Cidade</label>
+                        <div class="col-sm-10">
+                        <input type="text" name="user" value="<?php echo $nameCity['nameCity']?>">
+                        </div>
                       <!-- /.timeline-label -->
+
+
                       <!-- timeline item -->
                       <div>
                         <i class="fas fa-envelope bg-primary"></i>
@@ -1253,6 +1262,7 @@ if(isset($_POST['sub'])){
                       <div class="form-group row">
                         <div class="offset-sm-2 col-sm-10">
                           <button type="submit" value="submit" name="sub" class="btn btn-danger">Submit</button>
+                          <a href="delete.php"><button type="button" class="btn btn-danger">Delete</button></a>
                         </div>
                       </div>
                     </form>
