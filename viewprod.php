@@ -1,6 +1,6 @@
 <?php
 include 'connect.php';
-include 'checklogin.php';
+
 ?>
 <table border='1'>
     <tr>
@@ -15,14 +15,14 @@ include 'checklogin.php';
 <?php
 $sq="select * from produto";
 $qu=mysqli_query($con,$sq);
-while($=  mysqli_fetch_assoc($prc)){
+while($f=  mysqli_fetch_assoc($qu)){
     ?>
     <tr>
         <td>
-            <?php echo $p['prod']?> 
+            <?php echo $f['nomeProd']?> 
         </td>
         <td>
-            <?php echo $prc['preco']?> 
+            <?php echo $f['precoProd']?> 
         </td>
     </tr>
     <?php

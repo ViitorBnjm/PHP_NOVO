@@ -5,7 +5,7 @@ if(isset($_POST['sub'])){
     $prc=$_POST['preco'];
 
     $i="insert into produto(nomeProd,precoProd)value('$p','$prc')";
-    mysqli_query($con, $i);
+    mysqli_query($con, $i, $sq);
 }
 ?>
 
