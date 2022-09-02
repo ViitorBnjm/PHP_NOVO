@@ -19,11 +19,10 @@ while($f=  mysqli_fetch_assoc($qu)){
     ?>
     <tr>
         <td>
-            <?php echo $f['name']?> 
+            <?php echo $f['name']?>
         </td>
         <td>
-            <?php echo $f['username']?> 
-            <button href="delete.php" type="submit" value="submit" name="sub" class="btn btn-danger">Delete</button>
+            <?php echo $f['username']?>
         </td>
     </tr>
     <?php

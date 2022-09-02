@@ -1,11 +1,11 @@
 <?php
-include'connect.php';
-// include'checkLogin.php';
+header('Content-Type: text/html; charset=utf-8');
+include 'connect.php';
 if(isset($_POST['sub'])){
-
     $nameCity=$_POST['nameCity'];
-    // $i="insert into reg(name,username,password,city,image,gender)value('$t','$u','$p','$c','$img','$g')";
-    $i = "insert into city(nameCity) values('$nameCity')";
+
+    //$i="insert into reg(name,username,password,city,image,gender)value('$t','$u','$p','$c','$img','$g')";
+    $i="insert into city (nameCity) values ('$nameCity')";
     mysqli_query($con, $i);
 }
 ?>
@@ -21,12 +21,16 @@ if(isset($_POST['sub'])){
                 <tr>
                     <td>
                         Name
-                        <input type="text" name="nameCity">
+                        <input type="text" name="text">
                     </td>
                 </tr>
                 <tr>
                     <td>
                         <input type="submit" value="submit" name="sub">
+                               
+                    </td>
+                    <td>
+                        <a href="login.php">Login</a>      
                     </td>
                 </tr>
             </table>
