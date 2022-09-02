@@ -1,11 +1,10 @@
 <?php
-include'connect.php';
-// include'checkLogin.php';
+include 'connect.php';
 if(isset($_POST['sub'])){
+    $p=$_POST['prod'];
+    $prc=$_POST['preco'];
 
-    $nameCity=$_POST['nameCity'];
-    // $i="insert into reg(name,username,password,city,image,gender)value('$t','$u','$p','$c','$img','$g')";
-    $i = "insert into city(nameCity) values('$nameCity')";
+    $i="insert into produto(nomeProd,precoProd)value('$p','$prc')";
     mysqli_query($con, $i);
 }
 ?>
@@ -20,13 +19,20 @@ if(isset($_POST['sub'])){
             <table>
                 <tr>
                     <td>
-                        Name
-                        <input type="text" name="nameCity">
+                        Nome do Produto
+                        <input type="text" name="text">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Preço do Produto
+                        <input type="text" name="user">
                     </td>
                 </tr>
                 <tr>
                     <td>
                         <input type="submit" value="submit" name="sub">
+                               
                     </td>
                 </tr>
             </table>
