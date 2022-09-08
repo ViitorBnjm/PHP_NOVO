@@ -411,7 +411,33 @@ if(isset($_POST['sub'])){
 
         mysqli_query($con, $sqlAddOrUpdate);
 
-
+        if(isset($_POST['excludeItem'])){
+    
+          $product_id = (int)$_POST['idProduto'];
+          $quantity = (int)$_POST['quantity'];
+          $nomeProduto = $_POST['nomeProduto'];
+  
+          $idCompra = 1;
+  
+          $sqlGetCompra="delete * from compra_produto where FK_COMPRA={$idCompra} AND FK_PRODUTO ={$product_id}";
+          $queryGetCompra= mysqli_query($con, $sqlGetCompra);
+          $resultCompra=mysqli_fetch_assoc($queryGetCompra);
+  
+          $ExisteCompra = isset($resultCompra);    
+          if(isset($resultCompra)){
+              
+              $sqlAddOrUpdate = "
+              UPDATE compra_produto set QTD_PRODUTO={$quantity} 
+              WHERE FK_PRODUTO ={$product_id} and FK_COMPRA={$idCompra};
+              ";
+  
+          }}else{
+              $sqlAddOrUpdate = "
+              INSERT INTO compra_produto (FK_PRODUTO,FK_COMPRA,QTD_PRODUTO) 
+              VALUES ({$product_id}, {$idCompra},{$quantity});
+              ";
+  
+          }
 
 
         // header('location:home.php');
@@ -466,6 +492,7 @@ while($produto=  mysqli_fetch_assoc($qu)){
                 <input type="hidden" name="idProduto" value="<?=$produto['ID_PRODUTO']?>">
                 <input type="hidden" name="nomeProduto" value="<?=$produto['NOME_PRODUTO']?>">
                 <input type="submit" name="addShoppingCart" value="Adicionar">
+                <input type="submit" name="excludeItem" value="Excluir">
             </form>
         </td>
     </tr>
